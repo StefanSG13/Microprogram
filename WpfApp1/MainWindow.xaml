@@ -1,0 +1,25 @@
+﻿<Window x:Class="WpfApp1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="Instruction Table" Height="450" Width="800">
+    <Grid>
+        <DataGrid x:Name="dataGrid" AutoGenerateColumns="False" IsReadOnly="True" Margin="10">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Adresa" Binding="{Binding Address}" Width="*"/>
+                <DataGridTextColumn Header="Stage" Binding="{Binding Stage}" Width="*"/>
+                <DataGridTextColumn Header="SBUS" Binding="{Binding Reg1}" Width="*"/>
+                <DataGridTextColumn Header="DBUS" Binding="{Binding Reg2}" Width="*"/>
+                <DataGridTextColumn Header="Operatie ALU" Binding="{Binding Reg3}" Width="*"/>
+                <DataGridTextColumn Header="RBUS" Binding="{Binding Reg4}" Width="*"/>
+                <DataGridTextColumn Header="Operatie Mem" Binding="{Binding Reg6}" Width="*"/>
+                <DataGridTextColumn Header="Alta Operatie" Binding="{Binding Reg5}" Width="*"/>
+                <DataGridTextColumn Header="Conditie" Binding="{Binding Operation}" Width="*"/>
+                <DataGridTextColumn Header="Succesor" Binding="{Binding NextStage}" Width="*"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Window>
